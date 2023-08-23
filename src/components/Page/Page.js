@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 import styles from './Page.css';
+// import hero from '../../assets/a-war-of-whispers-bg.jpg';
 
 function Page() {
     const strings = {
@@ -26,6 +27,7 @@ function Page() {
 
     return (
         <div className={styles.container}>
+            {/* <div className={styles.overlay} style={{backgroundImage: `url('dist/${hero}')`}}> */}
             <div className={styles.overlay}>
                 <header className={styles.titles}>
                     <h1 className={styles['heading--titles']}>{strings.headingGlobal}</h1>
