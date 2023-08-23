@@ -4,7 +4,7 @@ import styles from './Footer.css'
 function Footer() {
     const links = {
       homepage: 'https://github.com/karuto',
-      github: 'https://github.com/karuto/github-static-site-template',
+      github: 'https://github.com/karuto/a-war-of-whispers-turn-randomizer',
       email: 'mailto:hi@vincentzh.com'
     };
 

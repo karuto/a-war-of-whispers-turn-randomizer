@@ -4,11 +4,25 @@ import styles from './Page.css';
 
 function Page() {
     const strings = {
-        headingGlobal: 'GitHub Static Site Template',
-        subheadingGlobal: 'A React-based template for GitHub Pages. Start editing away!'
+        headingGlobal: 'A War of Whispers Turn Randomizer',
+        subheadingGlobal: 'Randomize turns with guaranteed unique results from the last turns'
     };
 
-    const [count, setCount] = useState(0);
+    const [sequence, setSequence] = useState([]);
+    const [lastSequence, setLastSequence] = useState('');
+
+    const generateRandomSequence = () => {
+        const players = ['blue', 'red', 'green', 'yellow', 'brown'];
+        let newSequence;
+    
+        // To prevent having the same first player consecutively
+        do {
+          newSequence = [...players].sort(() => Math.random() - 0.5);
+        } while (newSequence[0] === (sequence.length > 0 ? sequence[0] : null));
+    
+        setLastSequence(JSON.stringify(newSequence));
+        setSequence(newSequence);
+    };
 
     return (
         <div className={styles.container}>
@@ -19,10 +33,14 @@ function Page() {
                 </header>
             </div>
             <div className={styles['container--contents']}>
-                <h1>Hello world! Count: {count}</h1>
-                <button onClick={() => setCount(count + 1)}>
-                    Click me
-                </button>
+                <div className={styles.randomizer}>
+                    <button className={styles.button} onClick={generateRandomSequence}>Generate Random Sequence</button>
+                    <ul>
+                        {sequence.map((player, index) => (
+                        <h2 key={index}>{player}</h2>
+                        ))}
+                    </ul>
+                </div>
             </div>
             <Footer />
         </div>

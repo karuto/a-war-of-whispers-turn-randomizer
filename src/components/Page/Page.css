@@ -54,3 +54,17 @@
   composes: subheading;
   font-size: 16px;
 }
+
+
+.randomizer {
+  margin: 32px auto;
+  text-align: center;
+}
+
+.button {
+  padding: 24px;
+}
+
+li {
+  list-style: none;
+}
