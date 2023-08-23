@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karuto/github-static-site-template.git"
+    "url": "git+https://github.com/karuto/a-war-of-whispers-turn-randomizer.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/karuto/github-static-site-template/issues"
+    "url": "https://github.com/karuto/a-war-of-whispers-turn-randomizer/issues"
   },
-  "homepage": "https://github.com/karuto/github-static-site-template#readme",
+  "homepage": "https://github.com/karuto/a-war-of-whispers-turn-randomizer#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
